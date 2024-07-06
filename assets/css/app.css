@@ -1,0 +1,100 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+/* This file is for your main application CSS */
+
+.container {
+  display: flex;
+  align-items: center;
+}
+
+.toggle-switch {
+  position: relative;
+  width: 50px;
+  height: 24px;
+  margin-left: 10px;
+}
+
+.checkbox {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  cursor: pointer;
+  border-radius: 24px;
+}
+
+.label .inner {
+  position: absolute;
+  left: 4px;
+  width: 16px;
+  height: 16px;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.3s ease-in-out;
+}
+
+.label .switch {
+  position: absolute;
+  left: 4px;
+  right: 4px;
+  top: 4px;
+  bottom: 4px;
+  border-radius: 24px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.checkbox:checked + .label .inner {
+  transform: translateX(26px);
+}
+
+.checkbox:checked + .label {
+  background-color: #66bb6a;
+}
+
+/* Light Mode */
+.light-mode .app-header {
+  background-color: #f2f2f2;
+  color: #282c34;
+}
+
+.light-mode .app-header th {
+  background-color: #282c34;
+  color: #f2f2f2;
+}
+
+.light-mode .app-header td {
+  background-color: white;
+}
+
+/* Dark Mode */
+.dark-mode .app-header {
+  background-color: #282c34;
+  color: white;
+}
+
+.dark-mode .app-header th {
+  background-color: #f2f2f2;
+  color: #282c34;
+}
+
+.dark-mode .app-header td {
+  background-color: #282c34;
+}
+
+/* Position the toggle switch to the top right */
+.toggle-switch-container {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
